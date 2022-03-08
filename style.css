@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: darkgray;
+  height: 800px;
+  overflow: hidden;
+}
+.gameContainer {
+  background: url("bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  height: 1000px;
+}
+
+.dino {
+  height: 210px;
+  width: 290px;
+  background-image: url("gojo.png");
+  background-size: cover;
+  transform: scaleX(-1);
+  position: absolute;
+  bottom: 0;
+  background-repeat: no-repeat;
+  left: 43px;
+}
+
+.obstacle {
+  background-image: url("itadori.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 170px;
+  width: 250px;
+  position: absolute;
+  bottom: 0;
+  left: 700px;
+}
+
+.animateDino {
+  animation: dino 1.2s linear;
+}
+
+.obstacleAni{
+  animation: obstacleAni 5s linear infinite;
+}
+
+.gameOver{
+  color: burlywood;
+  font-size: 40px;
+  position: relative;
+  text-align: center;
+  top: 63px;
+  font-family: sans-serif;
+}
+
+#scoreCont{
+  color: azure;
+  font-size: 30px;
+  position: absolute;
+  top: 37px;
+  right: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid brown;
+  width: 210px;
+  padding: 10px;
+}
+
+@keyframes dino {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 422px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes obstacleAni {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: -10vw;
+  }
+}
